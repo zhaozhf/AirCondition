@@ -1,0 +1,44 @@
+﻿{"resultcode":"200","reason":"SUCCESSED!","result":
+[
+	{"citynow":
+		{"city":"beijing","AQI":"133","quality":"轻度污染","date":"2014-04-09 14:00"},
+		"lastTwoWeeks":
+			{"1":{"city":"beijing","AQI":"322","quality":"严重污染","date":"03月26日"},
+			"2":{"city":"beijing","AQI":"294","quality":"重度污染","date":"03月27日"},
+			"3":{"city":"beijing","AQI":"171","quality":"中度污染","date":"03月28日"},
+			"4":{"city":"beijing","AQI":"71","quality":"良","date":"03月29日"},
+			"5":{"city":"beijing","AQI":"60","quality":"良","date":"03月30日"},
+			"6":{"city":"beijing","AQI":"176","quality":"中度污染","date":"03月31日"},
+			"7":{"city":"beijing","AQI":"145","quality":"轻度污染","date":"04月01日"},
+			"8":{"city":"beijing","AQI":"134","quality":"轻度污染","date":"04月02日"},
+			"9":{"city":"beijing","AQI":"59","quality":"良","date":"04月03日"},
+			"10":{"city":"beijing","AQI":"87","quality":"良","date":"04月04日"},
+			"11":{"city":"beijing","AQI":"61","quality":"良","date":"04月05日"},
+			"12":{"city":"beijing","AQI":"95","quality":"良","date":"04月06日"},
+			"13":{"city":"beijing","AQI":"133","quality":"轻度污染","date":"04月07日"},
+			"14":{"city":"beijing","AQI":"222","quality":"重度污染","date":"04月08日"},
+			"lastMoniData":
+				{"1":
+					{"city":"万寿西宫","AQI":"91","quality":"良","PM2.5Hour":"26μg/m³","PM2.5Day":"26μg/m³","PM10Hour":"131μg/m³"},
+				"2":
+					{"city":"定陵","AQI":"219","quality":"重度污染","PM2.5Hour":"169μg/m³","PM2.5Day":"169μg/m³","PM10Hour":"201μg/m³"},
+				"3":
+					{"city":"东四","AQI":"120","quality":"轻度污染","PM2.5Hour":"35μg/m³","PM2.5Day":"35μg/m³","PM10Hour":"190μg/m³"},
+				"4":
+					{"city":"天坛","AQI":"109","quality":"轻度污染","PM2.5Hour":"27μg/m³","PM2.5Day":"27μg/m³","PM10Hour":"168μg/m³"},
+				"5":
+					{"city":"农展馆","AQI":"120","quality":"轻度污染","PM2.5Hour":"51μg/m³","PM2.5Day":"51μg/m³","PM10Hour":"189μg/m³"},
+				"6":
+					{"city":"官园","AQI":"122","quality":"轻度污染","PM2.5Hour":"48μg/m³","PM2.5Day":"48μg/m³","PM10Hour":"193μg/m³"},
+				"7":
+					{"city":"海淀区万柳","AQI":"122","quality":"轻度污染","PM2.5Hour":"63μg/m³","PM2.5Day":"63μg/m³","PM10Hour":"194μg/m³"},
+				"8":
+					{"city":"顺义新城","AQI":"139","quality":"轻度污染","PM2.5Hour":"62μg/m³","PM2.5Day":"62μg/m³","PM10Hour":"228μg/m³"},
+				"9":
+					{"city":"怀柔镇","AQI":"121","quality":"轻度污染","PM2.5Hour":"82μg/m³","PM2.5Day":"82μg/m³","PM10Hour":"191μg/m³"},
+				"10":
+					{"city":"昌平镇","AQI":"210","quality":"重度污染","PM2.5Hour":"160μg/m³","PM2.5Day":"160μg/m³","PM10Hour":"218μg/m³"},
+				"11":
+					{"city":"奥体中心","AQI":"138","quality":"轻度污染","PM2.5Hour":"49μg/m³","PM2.5Day":"49μg/m³","PM10Hour":"225μg/m³"}
+				},
+				"error_code":0}}]}

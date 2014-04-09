@@ -1,0 +1,21 @@
+﻿<Window x:Class="AirConditionJson.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click1"/>
+        <TextBox Name="FileNameTextBox" HorizontalAlignment="Left" Height="23" Margin="43,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199"/>
+        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Margin="43,38,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="272" Width="128"/>
+        <StackPanel Name="airInfoStackPanel" HorizontalAlignment="Left" Height="209" Margin="263,67,0,0" VerticalAlignment="Top" Width="151">
+            <Label Content="城市"/>
+            <Label Name="city" Content="{Binding City}"/>
+            <Label Content="AQI"/>
+            <Label Name="aqi" Content="{Binding AQI}"/>
+            <Label Content="空气质量"/>
+            <Label Name="quality" Content="{Binding Quality}"/>
+            <Label Content="日期"/>
+            <Label Name="date" Content="{Binding Date}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
