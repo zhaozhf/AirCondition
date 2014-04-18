@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PmInfo.cs" />
     <Compile Include="ViewModel\AirInfoViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -128,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ColorJson.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

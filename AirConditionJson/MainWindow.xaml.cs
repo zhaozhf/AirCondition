@@ -19,6 +19,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Drawing;
+
 
 namespace AirConditionJson
 {
@@ -27,6 +29,7 @@ namespace AirConditionJson
     /// </summary>
     public partial class MainWindow : Window
     {
+        PmInfo pmNow = new PmInfo();
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +50,36 @@ namespace AirConditionJson
         }
 
         /// <summary>
+        /// 测试解析样本文件
+        /// </summary>
+        /// <param name="json"></param>
+        public void buildPmInfoList(string json)
+        {
+            string filename = @"./ColorJson.txt";
+            int aQI = int.Parse(json);
+            try
+            {
+                StreamReader sr = new StreamReader(filename, Encoding.UTF8);
+                string s = sr.ReadToEnd();
+                List<PmInfo> account = JsonConvert.DeserializeObject<List<PmInfo>>(s);
+                foreach (PmInfo pmInfo in account)
+                {
+                    if ((aQI > pmInfo.l) && (aQI < pmInfo.h))
+                    {
+                        pmNow = pmInfo;
+                        break;
+                    }
+                }
+                MessageBox.Show(pmNow.Chinese);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+        }
+
+        /// <summary>
         /// 将即时查询信息转换为AirInfo对象
         /// </summary>
         /// <param name="json">json字符串</param>
@@ -62,19 +95,6 @@ namespace AirConditionJson
             string cookie;
             string url = "http://web.juhe.cn:8080/environment/air/cityair?city=beijing&key=31c1dfaa5d358fbb428720e7da8add10";
             System.Text.Encoding gb = System.Text.Encoding.GetEncoding("GB2312");
-
-
-            //string temp = GetHtml(url, out cookie);
-            //temp = buildAQINow(temp);
-            //AirInfo airInfo = buildAirInfoObject(temp);
-
-            //airInfoStackPanel.DataContext = new AirInfoViewModel(airInfo);
-
-            //city.Content = "北京";
-
-
-            //WebRequest request = WebRequest.Create(url);
-
 
             try
             {
@@ -102,18 +122,28 @@ namespace AirConditionJson
             string temp = buildAQINow(htmlContent);
             AirInfo airInfo = buildAirInfoObject(temp);
 
+            buildPmInfoList(airInfo.AQI);
 
             Dispatcher.BeginInvoke(
                 (Action)delegate()
                 {
                     airInfoStackPanel.DataContext = new AirInfoViewModel(airInfo);
+                    aqi.Background = new SolidColorBrush(convertColor(pmNow.Color));
                     city.Content = "北京";
                 });
+        }
 
-
-
-
-
+        /// <summary>
+        /// 将#XXXXXX形式颜色转换为RGB模式
+        /// </summary>
+        /// <param name="colorString"></param>
+        /// <returns></returns>
+        private Color convertColor(string colorString)
+        {
+            byte red = Convert.ToByte(int.Parse(colorString.Substring(0, 2), System.Globalization.NumberStyles.HexNumber));
+            byte green = Convert.ToByte(int.Parse(colorString.Substring(2, 2), System.Globalization.NumberStyles.HexNumber));
+            byte blue = Convert.ToByte(int.Parse(colorString.Substring(4, 2), System.Globalization.NumberStyles.HexNumber));
+            return Color.FromRgb(red, green, blue);
         }
 
         /// <summary>
@@ -171,6 +201,11 @@ namespace AirConditionJson
 
                 sr.Close();
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //buildPmInfoList("");
         }
     }
 

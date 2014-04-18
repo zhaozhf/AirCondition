@@ -1,0 +1,9 @@
+
+ [ 
+{"l":"1","h":"50","Name":"Good","Chinese":"优","Color":"009966","Content":"Air quality is considered satisfactory, and air pollution poses little or no risk"},
+{"l":"51","h":"100","Name":"Moderate","Chinese":"良","Color":"ffde33","Content":"Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."},
+{"l":"101,"h","150","Name":"Unhealthy for Sensitive Groups","Chinese":"轻度","Color":"ff7e00","Content":"Members of sensitive groups may experience health effects. The general public is not likely to be affected."},
+{"l":"151,"h","200","Name":"Unhealthy","Chinese":"中度","Color":"ff0000","Content":"Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects."},
+{"l":"201,"h","300","Name":"Very Unhealthy,"Chinese":"重度","Color":"99004c","Content":"Health warnings of emergency conditions. The entire population is more likely to be affected."},
+{"l":"301,"h","500","Name":"Hazardous","Chinese":"严重","Color":"7e0023","Content":"Health alert: everyone may experience more serious health effects"}
+]

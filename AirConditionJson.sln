@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirConditionJson", "AirConditionJson\AirConditionJson.csproj", "{E07CA0B4-86C5-406A-AE56-CD4584B7018E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F8EC4419-1800-43B9-9AE6-0779AB3428C2}"
+	ProjectSection(SolutionItems) = preProject
+		ColorJson.txt = ColorJson.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
